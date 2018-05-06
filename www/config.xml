@@ -22,5 +22,5 @@
 	
 	<access origin="*"/>
    	<plugin name="cordova-plugin-whitelist" version="1" />
-    <plugin name="bluetooth-terminal" spec="https://github.com/1oginov/bluetooth-terminal.git"/>
+    <plugin name="com.1oginov.plugins.BluetoothTerminal" spec="https://github.com/1oginov/bluetooth-terminal.git"/>
 </widget>
