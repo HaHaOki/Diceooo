@@ -24,6 +24,7 @@ document.getElementById("BtSearch").onclick = btSearch;
 */
 
 function btSearch() {
+    alert("connect button tapped");
     
     // Obtain configured instance.
 let terminal = new BluetoothTerminal();
@@ -41,6 +42,7 @@ terminal.connect().then(() => {
 
 
 function testFunction() {
+    alert("disconnect button tapped");
     
     // Disconnect from the connected device.
 terminal.disconnect();
