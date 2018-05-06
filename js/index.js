@@ -4,6 +4,10 @@
 Useful Links: https://github.com/bcsphere/bluetooth
               http://docs.phonegap.com/en/edge/cordova_accelerometer_accelerometer.md.html#Accelerometer
               https://www.npmjs.com/package/bluetooth-terminal
+              
+https://www.w3.org/TR/orientation-event/
+https://www.npmjs.com/package/cordova-plugin-bluetoothle
+
 
 -- Possible function to see if bluetooth is enabled --
 $(document).ready(function checkBTEnabled(){
@@ -25,10 +29,10 @@ document.getElementById("BtSearch").onclick = btSearch;
 var Search = document.getElementById("BTSearch");
 var Disconnect = document.getElementById("BTDisconnect");
 
-Search.addEventListener("click", testConnect);
-Disconnect.addEventListener("click", testDisconnect);
+Search.addEventListener("click", btConnect);
+Disconnect.addEventListener("click", btDisconnect);
 
-function btSearch() {
+function btConnect() {
     alert("connect button tapped");
     
     // Obtain configured instance.
