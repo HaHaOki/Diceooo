@@ -22,6 +22,11 @@ message.alert(Results);
 document.getElementById("BtSearch").onclick = btSearch;
 
 */
+var Search = document.getElementById("BTSearch");
+var Disconnect = document.getElementById("BTDisconnect");
+
+Search.addEventListener("click", testConnect);
+Disconnect.addEventListener("click", testDisconnect);
 
 function btSearch() {
     alert("connect button tapped");
@@ -41,11 +46,19 @@ terminal.connect().then(() => {
 }
 
 
-function testFunction() {
+function btDisconnect() {
     alert("disconnect button tapped");
     
     // Disconnect from the connected device.
 terminal.disconnect();
+}
+
+function testConnect(){
+    alert("Connect button tapped");
+}
+
+function testDisconnect() {
+    alert("Disconnect button tapped");
 }
 
 /*

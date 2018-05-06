@@ -5,6 +5,9 @@
     
     <title>Dice App</title>
     
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <script src="index.js" type="text/javascript"></script>
     
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
@@ -39,8 +42,27 @@
             <h2>Page 1</h2>
            <a href="#myPanel" data-rel="open">Open panel</a>
            <p>This page will be the bluetooth scanning / connecting page</p>
-           <input type="button" id="BTSearch" value="Search" onclick="btSearch();">
+           <input type="button" id="BTSearch" value="Search">
            <input type="button" id="BTDisconnect" value="Disconnect">
+           <!--
+           <script>
+               var Search = document.getElementById("BTSearch");
+               var Disconnect = document.getElementById("BTDisconnect");
+
+               Search.addEventListener("click", testConnect);
+               Disconnect.addEventListener("click", testDisconnect);
+               
+               function testConnect(){
+            alert("Connect button tapped");
+               }
+
+               function testDisconnect() {
+            alert("Disconnect button tapped");
+               }
+
+           
+           </script>
+           -->
 	   </div>
       
        <!-- FOOTER BAR -->  
