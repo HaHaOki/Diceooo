@@ -23,5 +23,5 @@
 	<access origin="*"/>
    	<plugin name="cordova-plugin-whitelist" version="1" />
     <plugin name="cordova-plugin-vibration" source="npm" />
-    <plugin name="cordova-plugin-bluetoothle" source="npm" />
+    <plugin name="cordova-plugin-bluetoothle" spec="2.4.0" source="npm" />
 </widget>
