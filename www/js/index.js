@@ -108,3 +108,25 @@ html.picture = 6
 }
 
 */
+
+/* Page 3 Javascript */
+/*
+var one = document.getElementById("numberOne");
+one.addEventListener("click", function);
+
+var two = document.getElementById("numberTwo");
+two.addEventListener("click", function);
+
+var three = document.getElementById("numberThree");
+three.addEventListener("click", function);
+
+var four = document.getElementById("numberFour");
+four.addEventListener("click", function);
+
+var five = document.getElementById("numberFive");
+five.addEventListener("click", function);
+
+var six = document.getElementById("numberSix");
+six.addEventListener("click", function);
+
+*/

@@ -6,7 +6,7 @@
         id        = "mob.app.help.me"
         version   = "1.0.0">
 
-    <name>Dice App</name>
+    <name>Dice App Final</name>
 
     <description>
         Systems Analysis project
@@ -22,6 +22,7 @@
 	
 	<access origin="*"/>
    	<plugin name="cordova-plugin-whitelist" version="1" />
+    <plugin name="cordova-plugin-vibration" source="npm" />
     <!--<plugin name="com.1oginov.plugins.BluetoothTerminal" spec="https://github.com/1oginov/bluetooth-terminal"/>-->
     <!--<plugin name="com.1oginov.plugins.BluetoothTerminal" spec="~1" source="npm" />-->
 </widget>

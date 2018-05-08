@@ -8,13 +8,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <script src="index.js" type="text/javascript"></script>
+    <script src="js/BluetoothTerminal.js" type="text/javascript"></script>
     
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 	<script src="jquery-mobile/jquery-1.8.3.min.js" type="text/javascript"></script>
     <script src="jquery-mobile/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
-    <script src="js/index.js"type="text/javascript" charset="utf-8"></script>
-    <script src="BluetoothTerminal.js" type="text/javascript"></script>
     <link href="jquery-mobile/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
     
 </head>
@@ -30,6 +28,7 @@
       <h2>Panel Header</h2>
           <a href="#page1" class="ui-btn-inline">Page One</a>
           <a href="#page2" class="ui-btn-inline">Page Two</a>
+          <a href="#page3" class="ui-btn-inline">Page Three</a>
       </div>
       
        <!-- HEADER BAR -->  
@@ -44,6 +43,7 @@
            <p>This page will be the bluetooth scanning / connecting page</p>
            <input type="button" id="BTSearch" value="Search">
            <input type="button" id="BTDisconnect" value="Disconnect">
+           <script src="js/index.js"type="text/javascript"></script>
            <!--
            <script>
                var Search = document.getElementById("BTSearch");
@@ -85,6 +85,7 @@
       <h2>Panel Header</h2>
           <a href="#page1" class="ui-btn-inline">Page One</a>
           <a href="#page2" class="ui-btn-inline">Page Two</a>
+          <a href="#page3" class="ui-btn-inline">Page Three</a>
       </div>
       
        <!-- HEADER BAR -->  
@@ -97,6 +98,54 @@
             <h2>Page 2</h2>
            <a href="#myPanel" data-rel="open">Open panel</a>
            <p>This page will be the dice page, showing (a 3d model if possible, otherwise) pictures dependant on the dice's position</p>
+	   </div>
+      
+       <!-- FOOTER BAR -->  
+	   <div data-role="footer" data-position="fixed"> <!-- fixed to bottom of screen -->
+		  <h1>Sample Footer Text</h1>
+	   </div> 
+  
+	</div>
+    
+<!-- PAGE BREAK -->    
+<!-- PAGE BREAK -->      
+<!-- PAGE BREAK -->
+    
+    <!-- Page1 -->
+ 
+  <div data-role="page" id="page3">
+      
+      <!-- Panel -->
+      <div data-role="panel" id="myPanel" data-display="overlay">
+      <h2>Panel Header</h2>
+          <a href="#page1" class="ui-btn-inline">Page One</a>
+          <a href="#page2" class="ui-btn-inline">Page Two</a>
+          <a href="#page3" class="ui-btn-inline">Page Three</a>
+      </div>
+      
+       <!-- HEADER BAR -->  
+	   <div data-role="header" data-position="fixed"> <!-- fixed to top of screen -->
+		  <h1>Header</h1>
+	   </div>
+      
+      <!-- Content -->
+	   <div data-role="main" class="ui-content">
+            <h2>Page 3</h2>
+           <a href="#myPanel" data-rel="open">Open panel</a>
+           <p>This page will be the dice page, showing (a 3d model if possible, otherwise) pictures dependant on the dice's position</p>
+           <a href="#" class="ui-btn ui-btn-inline" id="numberOne">One</a>
+           <a href="#" class="ui-btn ui-btn-inline" id="numberTwo">Two</a>
+           <a href="#" class="ui-btn ui-btn-inline" id="numberThree">Three</a>
+           <a href="#" class="ui-btn ui-btn-inline" id="numberFour">Four</a>
+           <a href="#" class="ui-btn ui-btn-inline" id="numberFive">Five</a>
+           <a href="#" class="ui-btn ui-btn-inline" id="numberSix">Six</a>
+           
+           <div id="pictureDisplay" class="dicePicture">
+           
+           </div>
+           <div id="numberDisplay" class="numberPicture">
+           
+           </div>
 	   </div>
       
        <!-- FOOTER BAR -->  
