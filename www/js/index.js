@@ -21,11 +21,9 @@ Button on click event listener.
 (Using the BT API / plugins)
 Bluetooth.initiateScan;
 message.alert(Results);
-
 */
-//Bluetooth plugin initialize
-//Testing stuff goes here
-//Initialize
+//This is plagiarism my dude
+
 document.addEventListener('deviceready', function () {
 
     new Promise(function (resolve) {
@@ -36,7 +34,8 @@ document.addEventListener('deviceready', function () {
 
 });
 
-//Success
+
+
 function initializeSuccess(result) {
 
     if (result.status === "enabled") {
@@ -54,7 +53,43 @@ function initializeSuccess(result) {
     }
 }
 
-//Enable Log
+
+function handleError(error) {
+
+    var msg;
+
+    if (error.error && error.message) {
+
+        var errorItems = [];
+
+        if (error.service) {
+
+            errorItems.push("service: " + (uuids[error.service] || error.service));
+        }
+
+        if (error.characteristic) {
+
+            errorItems.push("characteristic: " + (uuids[error.characteristic] || error.characteristic));
+        }
+
+        msg = "Error on " + error.error + ": " + error.message + (errorItems.length && (" (" + errorItems.join(", ") + ")"));
+    }
+
+    else {
+
+        msg = error;
+    }
+
+    log(msg, "error");
+
+    if (error.error === "read" && error.service && error.characteristic) {
+
+        reportValue(error.service, error.characteristic, "Error: " + error.message);
+    }
+}
+
+
+
 function log(msg, level) {
 
     level = level || "log";
@@ -83,7 +118,7 @@ function log(msg, level) {
 }
 
 
-//Start scanning
+
 var foundDevices = [];
 
 function startScan() {
@@ -106,7 +141,7 @@ function startScan() {
     }
 }
 
-//Scann successful
+
 function startScanSuccess(result) {
 
     log("startScanSuccess(" + result.status + ")");
@@ -131,7 +166,7 @@ function startScanSuccess(result) {
     }
 }
 
-//Windows phone function
+
 function retrieveConnectedSuccess(result) {
 
     log("retrieveConnectedSuccess()");
@@ -144,7 +179,7 @@ function retrieveConnectedSuccess(result) {
     });
 }
 
-//Button creation
+
 function addDevice(name, address) {
 
     var button = document.createElement("button");
@@ -162,7 +197,6 @@ function addDevice(name, address) {
     document.getElementById("devices").appendChild(button);
 }
 
-//Connect to a device
 function connect(address) {
 
     log('Connecting to device: ' + address + "...", "status");
@@ -205,40 +239,37 @@ function stopScanSuccess() {
         log("Found " + foundDevices.length + " devices.", "status");
     }
 }
-//Testing stuff ends here
 
-//Enable bluetooth on the device 
-bluetoothle.enable(enableSuccess, enableError);
 
-var Search = document.getElementById("BTSearch");
-var Disconnect = document.getElementById("BTDisconnect");
+function connectSuccess(result) {
 
-//Scanning for devices function
-function btConnect() {
-    alert("connect button tapped");
-    bluetoothle.startScan(startScanSuccess, startScanError, params);
+    log("- " + result.status);
+
+    if (result.status === "connected") {
+
+        getDeviceServices(result.address);
     }
+    else if (result.status === "disconnected") {
 
-//Disconnect function
-    function btDisconnect() {
-        alert("disconnect button tapped");
-    
+        log("Disconnected from device: " + result.address, "status");
     }
+}
 
-    Search.addEventListener("click", btConnect);
-    Disconnect.addEventListener("click", btDisconnect);
+//I think so anyway
+
+
+//Bluetooth plugin initialize
+function btinitialize(){
+    bluetoothle.initialize(initializeResult, params);
+}
+
+var btScan = document.getElementById("BTSearch");
+function btSearch(){
+    alert("Hello?");
+}
+btScan.addEventListener("click", btSearch);
 
 /*
-
-$("#BtSearch").click(BtSearch() {
-alert("Button for searching tapped");
-connect();
-});
-
-$("#BTDisconnect").click(BtDisconnect() {
-alert("Button for disconnecting tapped");
-disconnect();
-});
 
 Optional message to ask if they're sure they want to pair to the device.
 
@@ -279,45 +310,45 @@ html.picture = 6
 
 //Vibrate once function
 var one = document.getElementById("numberOne");
-    function vibOne(){
+function vibOne() {
         navigator.vibrate(500);
-    }
+}
 
 one.addEventListener("click", vibOne);
 
 //Vibrate twice function
 var two = document.getElementById("numberTwo");
-    function vibTwo(){
+function vibTwo() {
         navigator.vibrate([500, 500, 500]);
-    }
+}
 
 two.addEventListener("click", vibTwo);
 
 //Vibrate three times function
 var three = document.getElementById("numberThree");
-    function vibThree(){
+function vibThree() {
         navigator.vibrate([500, 500, 500, 500, 500]);
-    }
+}
 
 three.addEventListener("click", vibThree);
 
 //Vibrate four times function
 var four = document.getElementById("numberFour");
-    function vibFour(){
-        navigator.vibrate([500, 500, 500, 500, 500, 500, 500])
-    }
+function vibFour() {
+        navigator.vibrate([500, 500, 500, 500, 500, 500, 500]);
+}
 four.addEventListener("click", vibFour);
 
 //Vibrate five times function
 var five = document.getElementById("numberFive");
-    function vibFive (){
-        navigator.vibrate([500, 500, 500, 500, 500, 500, 500, 500, 500])
-    }
+function vibFive() {
+        navigator.vibrate([500, 500, 500, 500, 500, 500, 500, 500, 500]);
+}
 five.addEventListener("click", vibFive);
 
 //Vibrate six times function
 var six = document.getElementById("numberSix");
-    function vibSix (){
-        navigator.vibrate([500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500])
-    }
+function vibSix() {
+        navigator.vibrate([500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500]);
+}
 six.addEventListener("click", vibSix);
