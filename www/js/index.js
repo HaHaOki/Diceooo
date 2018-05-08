@@ -29,41 +29,25 @@ document.getElementById("BtSearch").onclick = btSearch;
 var Search = document.getElementById("BTSearch");
 var Disconnect = document.getElementById("BTDisconnect");
 
-Search.addEventListener("click", btConnect);
-Disconnect.addEventListener("click", btDisconnect);
-
 function btConnect() {
     alert("connect button tapped");
+    }
+
+    function btDisconnect() {
+        alert("disconnect button tapped");
     
-    // Obtain configured instance.
-let terminal = new BluetoothTerminal();
- 
-// Override `receive` method to handle incoming data as you want.
-terminal.receive = function(data) {
-  alert(data);
-};
- 
-// Request the device for connection and get its name after successful connection.
-terminal.connect().then(() => {
-  alert(terminal.getDeviceName() + ' is connected!');
-});
-}
+    }
 
+    Search.addEventListener("click", btConnect);
+    Disconnect.addEventListener("click", btDisconnect);
 
-function btDisconnect() {
-    alert("disconnect button tapped");
-    
-    // Disconnect from the connected device.
-terminal.disconnect();
-}
+    function testConnect() {
+        alert("Connect button tapped");
+    }
 
-function testConnect(){
-    alert("Connect button tapped");
-}
-
-function testDisconnect() {
-    alert("Disconnect button tapped");
-}
+    function testDisconnect() {
+        alert("Disconnect button tapped");
+    }
 
 /*
 
@@ -107,13 +91,19 @@ If (connected device.position > FFFFFF && < FFFFFF) {
 html.picture = 6
 }
 
+
+
+ Page 3 Javascript
 */
-
-/* Page 3 Javascript */
-/*
 var one = document.getElementById("numberOne");
-one.addEventListener("click", function);
+    function vibOne(){
+        alert("Am I vibrating or are you happy to see me?");
+        navigator.vibrate(2000);
+    }
 
+one.addEventListener("click", vibOne);
+
+/*
 var two = document.getElementById("numberTwo");
 two.addEventListener("click", function);
 
@@ -128,5 +118,4 @@ five.addEventListener("click", function);
 
 var six = document.getElementById("numberSix");
 six.addEventListener("click", function);
-
 */
