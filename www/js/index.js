@@ -97,25 +97,40 @@ html.picture = 6
 */
 var one = document.getElementById("numberOne");
     function vibOne(){
-        alert("Am I vibrating or are you happy to see me?");
-        navigator.vibrate(2000);
+        navigator.vibrate(500);
     }
 
 one.addEventListener("click", vibOne);
 
-/*
+
 var two = document.getElementById("numberTwo");
-two.addEventListener("click", function);
+    function vibTwo(){
+        navigator.vibrate([500, 500, 500]);
+    }
+
+two.addEventListener("click", vibTwo);
 
 var three = document.getElementById("numberThree");
-three.addEventListener("click", function);
+    function vibThree(){
+        navigator.vibrate([500, 500, 500, 500, 500]);
+    }
+
+three.addEventListener("click", vibThree);
 
 var four = document.getElementById("numberFour");
-four.addEventListener("click", function);
+    function vibFour(){
+        navigator.vibrate([500, 500, 500, 500, 500, 500, 500])
+    }
+four.addEventListener("click", vibFour);
 
 var five = document.getElementById("numberFive");
-five.addEventListener("click", function);
+    function vibFive (){
+        navigator.vibrate([500, 500, 500, 500, 500, 500, 500, 500, 500])
+    }
+five.addEventListener("click", vibFive);
 
 var six = document.getElementById("numberSix");
-six.addEventListener("click", function);
-*/
+    function vibSix (){
+        navigator.vibrate([500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500])
+    }
+six.addEventListener("click", vibSix);
