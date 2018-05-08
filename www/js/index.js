@@ -8,6 +8,22 @@ Useful Links: https://github.com/bcsphere/bluetooth
 https://www.npmjs.com/package/cordova-plugin-bluetoothle
 (This is useful for the above; https://www.promisejs.org/)
 */
+
+//CSS changes since I'm not touching that JQuery css file
+$("#page1").css("background-color", "black");
+$("#page2").css("background-color", "black");
+$("#page3").css("background-color", "black");
+$("#mypanel").css("background-color", "DeepPink");
+$("#header").css("background-color", "DeepPink");
+$("#header1").css("background-color", "DeepPink");
+$("#footer1").css("background-color", "DeepPink");
+$("#header2").css("background-color", "DeepPink");
+$("#footer2").css("background-color", "DeepPink");
+$("#header3").css("background-color", "DeepPink");
+$("#footer4").css("background-color", "DeepPink");
+$("p").css("color", "DeepPink");
+$("h2").css("color", "DeepPink");
+
 //
 //Page 1 Code
 //
